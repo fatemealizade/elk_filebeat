@@ -1,8 +1,7 @@
 /etc/kibana/kibana.yml:
   file.managed:
     - source: salt://kibana/files/kibana.yml
-    - user: root
-    - group: root
+    - template: jinja
 
 restart kibana:
   cmd.run:

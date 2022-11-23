@@ -1,6 +1,6 @@
 ~/kibana.deb:
   file.managed:
-    - source: salt://repo/kibana.deb
+    - source: salt://kibana/repo/kibana.deb
     - user: root
 
 install kibana:
