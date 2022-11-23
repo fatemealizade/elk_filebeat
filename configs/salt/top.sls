@@ -1,0 +1,5 @@
+base:
+  '*':
+    - elastic
+    - kibana
+    - logstash
