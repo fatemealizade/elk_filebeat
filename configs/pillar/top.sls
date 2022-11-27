@@ -4,4 +4,5 @@ base:
     - kibana.config
     - kibana.usermanagement
     - kibana.rolemanagement
+    - kibana.secrets
     - filebeat
