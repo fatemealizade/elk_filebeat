@@ -3,3 +3,4 @@ base:
     - elastic
     - kibana
     - logstash
+    - filebeat

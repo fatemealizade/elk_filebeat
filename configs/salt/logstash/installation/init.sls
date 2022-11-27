@@ -1,6 +1,6 @@
 ~/logstash.deb:
   file.managed:
-    - source: salt://logstash/files/logstash.yml
+    - source: salt://logstash/repo/logstash.deb
     - user: root
     - group: root
 

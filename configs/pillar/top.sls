@@ -1,4 +1,7 @@
 base:
   '*':
     - elastic
-    - kibana
+    - kibana.config
+    - kibana.usermanagement
+    - kibana.rolemanagement
+    - filebeat
