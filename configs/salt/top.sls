@@ -4,3 +4,4 @@ base:
     - kibana
     - logstash
     - filebeat
+    - docker

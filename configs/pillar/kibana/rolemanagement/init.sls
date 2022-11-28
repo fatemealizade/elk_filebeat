@@ -1,7 +1,7 @@
 roles:
   filebeat_publisher:
     elastic_user: elastic
-    elastic_password: password
+    elastic_password: Aa123456 
     username: filebeat_publisher
     cluster_privileges: 
       - manage
@@ -19,7 +19,7 @@ roles:
 
   logstash_publisher:
     elastic_user: elastic
-    elastic_password: password
+    elastic_password: Aa123456
     username: logstash_publisher
     cluster_privileges:
       - manage

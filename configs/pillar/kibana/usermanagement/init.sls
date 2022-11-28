@@ -1,7 +1,7 @@
 users:
   filebeatpublisher:
     elastic_user: elastic
-    elastic_password: password
+    elastic_password: Aa123456
     username: filebeatpublisher
     password: password
     full_name: mr filebeat
@@ -10,7 +10,7 @@ users:
 
   logstashpublisher:
     elastic_user: elastic
-    elastic_password: password
+    elastic_password: Aa123456
     username: logstashpublisher
     password: password
     full_name: mr logstash
@@ -19,7 +19,7 @@ users:
 
   shiva:
     elastic_user: elastic
-    elastic_password: password
+    elastic_password: Aa123456
     username: shivash
     password: password
     full_name: shiva shams
