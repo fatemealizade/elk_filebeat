@@ -30,11 +30,11 @@ cluster.name: {{ pillar['elastic']['cluster_name'] }}
 #
 # Path to directory where to store the data (separate multiple locations by comma):
 #
-path.data: /var/lib/elasticsearch
+# path.data: /var/lib/elasticsearch
 #
 # Path to log files:
 #
-path.logs: /var/log/elasticsearch
+# path.logs: /var/log/elasticsearch
 #
 # ----------------------------------- Memory -----------------------------------
 #
@@ -53,7 +53,7 @@ path.logs: /var/log/elasticsearch
 # By default Elasticsearch is only accessible on localhost. Set a different
 # address here to expose this node on the network:
 #
-network.host: {{ grains['ipv4'][2] }}
+network.host: 0.0.0.0
 #
 # By default Elasticsearch listens for HTTP traffic on the first free port it
 # finds starting at 9200. Set a specific HTTP port here:
@@ -68,8 +68,8 @@ network.host: {{ grains['ipv4'][2] }}
 # The default list of hosts is ["127.0.0.1", "[::1]"]
 #
 
-discovery.seed_hosts: [{{ grains['ipv4'][2] }}]
-discovery.type: {{ pillar['elastic']['discovery_type'] }}
+#discovery.seed_hosts: [{{ grains['ipv4'][2] }}]
+#discovery.type: {{ pillar['elastic']['discovery_type'] }}
 
 # Bootstrap the cluster using an initial set of master-eligible nodes:
 #

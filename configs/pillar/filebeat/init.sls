@@ -1,5 +1,6 @@
 filebeat:
-  nginx_path: /var/log/nginx/*.log
+  container_log_path: /var/lib/docker/container/*/*.log
+  elastic_host: http://192.168.33.21
   enabled: true
-  filebeat_user: filebeatpublisher
-  filebeat_pass: password
+  filebeat_user: elastic
+  filebeat_pass: Aa123456
