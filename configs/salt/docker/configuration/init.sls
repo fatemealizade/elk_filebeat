@@ -23,11 +23,6 @@ copy docker-elk to minion:
     - source: salt://filebeat/files/filebeat.yml
     - template: jinja
 
-#~/create_user.sh:
-#  cmd:
-#    - source: salt://kibana/files/create_user.sh
-#    - template: jinja
-
 run docker compose:
   cmd.run:
     - name: /usr/bin/docker-compose up -d

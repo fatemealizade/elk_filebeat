@@ -73,24 +73,24 @@ setup.kibana:
   #space.id:
 
 # ---------------------------- Elasticsearch Output ----------------------------
-output.elasticsearch:
-  # Array of hosts to connect to.
-  hosts: ["{{ pillar['filebeat']['elastic_host'] }}:9200"]
-  indices:
-    - index: "filebeat-%{[agent.version]}-%{+yyyy.MM.dd}"
-
-  # Protocol - either `http` (default) or `https`.
-  #protocol: "https"
-
-  # Authentication credentials - either API key or username/password.
-  #api_key: "id:api_key"
-  username: {{ pillar['filebeat']['filebeat_user'] }}
-  password: {{ pillar['filebeat']['filebeat_pass'] }}
+#output.elasticsearch:
+#  # Array of hosts to connect to.
+#  hosts: ["{{ pillar['filebeat']['elastic_host'] }}:9200"]
+#  indices:
+#    - index: "filebeat-%{[agent.version]}-%{+yyyy.MM.dd}"
+#
+#  # Protocol - either `http` (default) or `https`.
+#  #protocol: "https"
+#
+#  # Authentication credentials - either API key or username/password.
+#  #api_key: "id:api_key"
+#  username: {{ pillar['filebeat']['filebeat_user'] }}
+#  password: {{ pillar['filebeat']['filebeat_pass'] }}
 
 # ------------------------------ Logstash Output -------------------------------
-#output.logstash:
+output.logstash:
   # The Logstash hosts
-  #hosts: ["192.168.33.25:5044"]
+  hosts: ["192.168.33.21:5044"]
 
   # Optional SSL. By default is off.
   # List of root certificates for HTTPS server verifications

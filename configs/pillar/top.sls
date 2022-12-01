@@ -6,3 +6,4 @@ base:
     - kibana.rolemanagement
     - kibana.secrets
     - filebeat
+    - logstash
