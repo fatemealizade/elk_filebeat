@@ -1,0 +1,2 @@
+node.name: {{ pillar['logstash']['node_name'] }}
+http.host: {{ pillar['logstash']['host'] }}

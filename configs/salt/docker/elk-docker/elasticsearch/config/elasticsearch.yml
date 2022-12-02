@@ -1,0 +1,5 @@
+cluster.name: {{ pillar['elastic']['cluster_name'] }}
+
+network.host: {{ pillar['elastic']['host'] }}
+
+xpack.security.enabled: {{ pillar['elastic']['xpack_security'] }}
