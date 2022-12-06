@@ -214,6 +214,35 @@ services:
       timeout: 10s
       retries: 120
 
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:${STACK_VERSION}
+    user: root
+    volumes:
+      - certs:/usr/share/elasticsearch/config/certs
+      - ./filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro,Z
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/containers/:/var/lib/docker/containers/:ro
+    environment:
+      FILEBEAT_PASSWORD: "${FILEBEAT_PASSWORD}"
+    depends_on:
+      - es01
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:${STACK_VERSION}
+    user: root
+    volumes:
+      - certs:/usr/share/elasticsearch/config/certs
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro,Z
+      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro,Z
+    ports:
+      - 5044:5044
+    environment:
+      - LS_JAVA_OPTS=-Xms256m -Xmx256m
+      - LOGSTASH_PASSWORD={LOGSTASH_PASSWORD}
+    depends_on:
+      - es01
+      - filebeat
+
 volumes:
   certs:
     driver: local
