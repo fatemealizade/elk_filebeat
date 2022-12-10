@@ -7,7 +7,7 @@ curl --cacert /var/lib/docker/volumes/root_certs/_data/elastic-certificate.p12 -
 	"cluster": {{ user['cluster_privileges'] | list | replace("'", '"') }},
   "indices": [
     {
-	    "names": "{{ user['indices'] }}",
+	    "names": {{ user['indices'] | list | replace("'", '"') }},
       "privileges": {{ user['privileges'] | list | replace("'", '"') }}
 
     }

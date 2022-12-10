@@ -24,7 +24,10 @@ roles:
     cluster_privileges:
       - manage
       - monitor
-    indices: ["filebeat-*"]
+    indices: 
+      - elk_fb_*
+      - kibana_sample_*
     privileges:
       - monitor
       - manage
+      - read

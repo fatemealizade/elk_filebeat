@@ -15,7 +15,7 @@ users:
     password: password
     full_name: mr logstash
     email: mr.logstash@yahoo.com
-    roles: logstash_publisher
+    roles: kibana_admin,logstash_publisher
 
   shiva:
     elastic_user: elastic
