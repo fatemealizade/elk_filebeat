@@ -25,3 +25,14 @@ users:
     full_name: shiva shams
     email: shiva.shams@yahoo.com
     roles: filebeat_publisher 
+
+
+  Amin:
+    elastic_user: elastic
+    elastic_password: Aa123456
+    username: Amin 
+    password: password
+    full_name: Amin Taheri
+    email: a.taheri@yahoo.com
+    roles: kibana_admin,viewer 
+
