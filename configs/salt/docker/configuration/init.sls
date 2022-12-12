@@ -3,15 +3,15 @@ copy docker-elk to minion:
     - name: /root/
     - source: salt://docker/elk-docker
 
-/root/elasticsearch/config/elasticsearch.yml:
-  file.managed:
-    - source: salt://docker/elk-docker/elasticsearch/config/elasticsearch.yml
-    - template: jinja
-
-/root/kibana/config/kibana.yml:
-  file.managed:
-    - source: salt://docker/elk-docker/kibana/config/kibana.yml
-    - template: jinja
+#/root/elasticsearch/config/elasticsearch.yml:
+#  file.managed:
+#    - source: salt://docker/elk-docker/elasticsearch/config/elasticsearch.yml
+#    - template: jinja
+#
+#/root/kibana/config/kibana.yml:
+#  file.managed:
+#    - source: salt://docker/elk-docker/kibana/config/kibana.yml
+#    - template: jinja
 
 /root/logstash/config/logstash.yml:
   file.managed:

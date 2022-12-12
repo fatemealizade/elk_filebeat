@@ -5,3 +5,5 @@ base:
     - logstash
     - filebeat
     - docker
+    - create_user
+    - create_role
