@@ -1,38 +1,38 @@
 roles:
-  - rolename: filebeat_publisher
-    cluster_privileges: 
-      - manage
-      - monitor
-    indices: ["filebeat-*"]
-    privileges: 
-      - monitor
-      - manage
-      - view_index_metadata
-      - create_doc
-      - create
-      - write
-      - read
-      - create_index
-
-  - rolename: logstash_publisher
-    cluster_privileges:
-      - manage
-      - monitor
-    indices: 
-      - elk_fb_*
-      - kibana_sample_*
+  - rolename: admin
+    elastic_privileges: 
+      - all 
+    indices: ["*"]
     privileges:
-      - monitor
-      - manage
-      - read
+      - all 
+    spaces: default
 
-  - rolename: HAPROXY
-    cluster_privileges:
-      - manage
+  - rolename: NOC
+    elastic_privileges: 
       - monitor
-    indices: 
-      - elk_fb_*
+    indices: ["*"]
     privileges:
-      - monitor
       - view_index_metadata
       - read
+    spaces: default
+
+  - rolename: developer
+    elastic_privileges: monitor
+    indices: ["*"]
+    privileges:
+      - view_index_metadata
+      - read
+    discover_access: read
+    visualize_access: read
+    dashboard_access: read
+    dev_tools_access: read
+    advanceSettings_access: read
+    indexPatterns_access: read
+    graph_access: read
+    apm_access: read
+    maps_access: read
+    canvas_access: read
+    infrastructure_access: read
+    logs_access: read
+    uptime_access: read
+    spaces: default
