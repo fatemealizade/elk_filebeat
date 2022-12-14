@@ -1,6 +1,5 @@
 roles:
-  - role1: filebeat_publisher
-    username: filebeat_publisher
+  - rolename: filebeat_publisher
     cluster_privileges: 
       - manage
       - monitor
@@ -15,8 +14,7 @@ roles:
       - read
       - create_index
 
-  - role2: logstash_publisher
-    username: logstash_publisher
+  - rolename: logstash_publisher
     cluster_privileges:
       - manage
       - monitor
@@ -26,4 +24,15 @@ roles:
     privileges:
       - monitor
       - manage
+      - read
+
+  - rolename: HAPROXY
+    cluster_privileges:
+      - manage
+      - monitor
+    indices: 
+      - elk_fb_*
+    privileges:
+      - monitor
+      - view_index_metadata
       - read
