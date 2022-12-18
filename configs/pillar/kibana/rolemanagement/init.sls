@@ -22,6 +22,7 @@ roles:
     privileges:
       - view_index_metadata
       - read
+      - monitor
     discover_access: read
     visualize_access: read
     dashboard_access: read
